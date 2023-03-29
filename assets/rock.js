@@ -7,24 +7,33 @@ var losses = 0;
 var ties = 0;
 
 function Game(){
-    if (random = "rock" && startUp = "rock")
-    ties += 1;
-    // else if (random = rock) and if (startUp = paper);
-    // wins += 1;
-    // else if (random = rock) and if (startUp = scissors);
-    // losses += 1;
-    // else if (random = paper) and if (startUp = rock);
-    // losses += 1;
-    // else if (random = paper) and if (startUp = paper);
-    // ties += 1;
-    // else if (random = paper) and if (startUp = scissors);
-    // wins += 1;
-    // else if (random = scissors) and if (startUp = rock);
-    // wins += 1;
-    // else if (random = scissors) and if (startUp = paper);
-    // losses += 1;
-    // else if (random = scissors) and if (startUp = scissors);
-    // ties += 1;
+    if (random === "rock" && startUp === "rock"){
+        ties +=1;
+    }
+    else if ((random === "rock") && (startUp === "paper")){
+        wins += 1;
+    }
+    else if (random === "rock" &&  startUp === "scissors"){
+        losses += 1;
+    }
+    else if (random === "paper" && startUp === "rock"){
+        losses += 1;
+    }
+    else if (random === "paper" && startUp === "paper"){
+        ties += 1;
+    }
+    else if (random === "paper" && startUp === "scissors"){
+        wins += 1;
+    }
+    else if (random === "scissors" && startUp === "rock"){
+        wins += 1;
+    }
+    else if (random === "scissors" && startUp === "paper"){
+        losses += 1;
+    }
+    else if (random === "scissors" && startUp === "scissors"){
+        ties += 1;
+    }
 
 }
 
@@ -35,3 +44,6 @@ function PlayGame(){
 }
 
 PlayGame();
+console.log(wins);
+console.log(losses);
+console.log(ties);
